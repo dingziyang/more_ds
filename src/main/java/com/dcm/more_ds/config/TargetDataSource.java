@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 /**
  * @ PackageName: com.dcm.more_ds.config
  * @ ClassName: MyDataSource
- * @ Description: 自定义注解mydatasource
+ * @ Description: 自定义注解TargetDataSource
  * @ Auther: xusanduo
  * @ Date: 2018/11/6 14:12
  */
