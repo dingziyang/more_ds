@@ -1,0 +1,57 @@
+server:
+  port: 9999
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: "/"
+
+spring:
+  # 设置json convert时的时区为中国
+  jackson:
+    time-zone: GMT+8
+# 日志文件设置
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    dao: debug
+    org:
+      mybatis: debug
+# 暴露 actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+datasource:
+  druid:
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,slf4j
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    # 合并多个DruidDataSource的监控数据
+    #useGlobalDataSourceStat: true
+  mysql:
+    url: jdbc:mysql://192.168.0.241:3306/pmpmain?useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: sdcm
+    password: Sdcm_123456
+    driverClassName: com.mysql.jdbc.Driver
+    validationQuery: select 'x'
+  oracle:
+    url: jdbc:oracle:thin:@192.168.0.200:1522:sdcm
+    username: sdcm
+    password: Sdcm123456
+    driverClassName: oracle.jdbc.OracleDriver
+    validationQuery: select 1 from dual
