@@ -1,5 +1,5 @@
 # more_ds
-springboot2 + mybatis + mysql + oracle + (fake)restful   [ 多数据源配置 ]
+springboot2 + mybatis + mysql + oracle + sqlserver +  (fake)restful   [ 多数据源配置 ]
 
 
 ### 环境介绍
@@ -7,7 +7,8 @@ springboot2 + mybatis + mysql + oracle + (fake)restful   [ 多数据源配置 ]
 - orm框架：Mybatis
 - 数据库连接池：Druid
 - 主数据源：Mysql
-- 从数据源：Oracle
+- 从数据源1：Oracle
+- 从数据源2：SqlServer2012
 - 运行平台：Jdk8
 - 日志配置：Logback
 
@@ -18,4 +19,4 @@ springboot2 + mybatis + mysql + oracle + (fake)restful   [ 多数据源配置 ]
 - AOP实现统一异常处理
 
 ### 具体介绍详博客
-[springboot2 + mybatis + mysql + oracle多数据源的配置](https://blog.csdn.net/xu_san_duo/article/details/83860675)
+[springboot2 + mybatis + mysql + oracle + sqlserver多数据源的配置](https://blog.csdn.net/xu_san_duo/article/details/83860675)
