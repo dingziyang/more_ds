@@ -81,6 +81,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.38</version>
         </dependency>
+        <!-- SqlServer -->
+        <dependency>
+            <groupId>com.microsoft</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>3.0</version>
+        </dependency>
+
         <!-- ali的druid数据库连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>

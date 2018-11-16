@@ -10,7 +10,8 @@ package com.dcm.more_ds.constant;
 
 public enum DataSourceType {
     Mysql("mysql"),
-    Oracle("oracle");
+    Oracle("oracle"),
+    Sqlserver("sqlserver");
 
     private String name;
 

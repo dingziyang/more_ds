@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
@@ -26,7 +25,7 @@ public class MyBatisConf {
     @Qualifier("dynamicDataSource")
     private DataSource dataSource;
 
-    @Bean
+    @Bean("sqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory() {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
@@ -38,6 +37,7 @@ public class MyBatisConf {
         properties.setProperty("supportMethodsArguments", "true");
         properties.setProperty("returnPageInfo", "check");
         properties.setProperty("params", "count=countSql");
+        properties.setProperty("autoRuntimeDialect","true"); // 运行时根据数据源自动选择方言 （这句很重要）
         pageHelper.setProperties(properties);
 
         // 添加插件

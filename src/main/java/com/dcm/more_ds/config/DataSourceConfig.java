@@ -52,7 +52,7 @@ public class DataSourceConfig {
 
 	@Bean(name="dataSourceMysql")
 	public DataSource dataSourceMysql(){
-		System.out.println("----------------主配" + dbUrl);
+		System.out.println("----------------主配:" + dbUrl);
 
 		DruidDataSource datasource = new DruidDataSource();
 		datasource.setUrl(dbUrl);
@@ -84,7 +84,7 @@ public class DataSourceConfig {
  
 	@Bean(name="dataSourceOracle")
 	public DataSource dataSourceOracle(){
-		System.out.println("----------------次配" + oracleUrl);
+		System.out.println("----------------次配1:" + oracleUrl);
 
 		DruidDataSource datasource = new DruidDataSource();
 		datasource.setUrl(oracleUrl);
@@ -92,6 +92,38 @@ public class DataSourceConfig {
 		datasource.setPassword(oraclePassword);
 		datasource.setDriverClassName(oracleDriverClassName);
 		datasource.setValidationQuery(oracleValidationQuery);
+		setDruidOptions(datasource); // 设置druid数据源的属性
+
+		return datasource;
+	}
+
+	// -----------------------------------------sqlserver config-------------------------------------
+
+	@Value("${datasource.sqlserver.url}")
+	private String sqlserverUrl;
+
+	@Value("${datasource.sqlserver.username}")
+	private String sqlserverUsername;
+
+	@Value("${datasource.sqlserver.password}")
+	private String sqlserverPassword;
+
+	@Value("${datasource.sqlserver.driverClassName}")
+	private String sqlserverDriverClassName;
+
+	@Value("${datasource.sqlserver.validationQuery}")
+	private String sqlserverValidationQuery;
+
+	@Bean(name="dataSourceSqlserver")
+	public DataSource dataSourceSqlserver(){
+		System.out.println("----------------次配2:" + sqlserverUrl);
+
+		DruidDataSource datasource = new DruidDataSource();
+		datasource.setUsername(sqlserverUsername);
+		datasource.setUrl(sqlserverUrl);
+		datasource.setPassword(sqlserverPassword);
+		datasource.setDriverClassName(sqlserverDriverClassName);
+		datasource.setValidationQuery(sqlserverValidationQuery);
 		setDruidOptions(datasource); // 设置druid数据源的属性
 
 		return datasource;
@@ -166,6 +198,7 @@ public class DataSourceConfig {
 		DynamicDataSource dynamicDataSource = new DynamicDataSource();
 		DataSource mysql = dataSourceMysql();
 		DataSource oracle = dataSourceOracle();
+		DataSource sqlserver = dataSourceSqlserver();
 
 		//设置默认数据源
 		dynamicDataSource.setDefaultTargetDataSource(mysql);
@@ -174,6 +207,7 @@ public class DataSourceConfig {
 		Map<Object,Object> map = new HashMap<>();
 		map.put(DataSourceType.Mysql.getName(),mysql);
 		map.put(DataSourceType.Oracle.getName(),oracle);
+		map.put(DataSourceType.Sqlserver.getName(),sqlserver);
 		dynamicDataSource.setTargetDataSources(map);
 
 		return dynamicDataSource;

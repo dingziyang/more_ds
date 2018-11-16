@@ -44,7 +44,7 @@ datasource:
     # 合并多个DruidDataSource的监控数据
     #useGlobalDataSourceStat: true
   mysql:
-    url: jdbc:mysql://192.168.0.241:3306/pmpmain?useUnicode=true&useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://192.168.0.241:3306/pmp?useUnicode=true&useSSL=false&characterEncoding=utf8
     username: sdcm
     password: Sdcm_123456
     driverClassName: com.mysql.jdbc.Driver
@@ -55,3 +55,9 @@ datasource:
     password: Sdcm123456
     driverClassName: oracle.jdbc.OracleDriver
     validationQuery: select 1 from dual
+  sqlserver:
+    url: jdbc:sqlserver://192.168.0.123:1433;DatabaseName=sfbmlk
+    username: sa
+    password: Sdcm123456
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    validationQuery: select 1

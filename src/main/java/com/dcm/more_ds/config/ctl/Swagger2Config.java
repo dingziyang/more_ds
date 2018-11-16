@@ -1,16 +1,24 @@
 package com.dcm.more_ds.config.ctl;
 
+import com.dcm.more_ds.constant.ResultVO;
+import com.dcm.more_ds.vo.DicBaseVO;
 import com.fasterxml.classmate.TypeResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.schema.AlternateTypeRules;
+import springfox.documentation.schema.WildcardType;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @PackageName: com.dcm.more_ds.config.ctl
@@ -46,6 +54,20 @@ public class Swagger2Config {
     public Docket MysqlRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(setApiInfo("mysql-api文档","mysql模块-api文档","https://blog.csdn.net/xu_san_duo", "1.0"))
+                .alternateTypeRules(
+                        AlternateTypeRules.newRule(
+                                typeResolver.resolve(
+                                        ResultVO.class,
+                                        typeResolver.resolve(
+                                                Map.class,
+                                                String.class,
+                                                typeResolver.resolve( List.class, DicBaseVO.class)
+                                        )
+                                ),
+                                typeResolver.resolve( ResultVO.class, WildcardType.class ),
+                                Ordered.HIGHEST_PRECEDENCE
+                        )
+                )
                 .groupName("mysql模块")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.dcm.more_ds.controller.mysql"))
@@ -60,6 +82,17 @@ public class Swagger2Config {
                 .groupName("oracle模块")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.dcm.more_ds.controller.oracle"))
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    @Bean
+    public Docket SqlserverRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(setApiInfo("sqlServer-api文档","sqlServer模块-api文档","https://blog.csdn.net/xu_san_duo", "1.0"))
+                .groupName("sqlServer模块")
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.dcm.more_ds.controller.sqlserver"))
                 .paths(PathSelectors.any())
                 .build();
     }

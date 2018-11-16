@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dcm.more_ds.dao.sqlserver.ProsonmanagementInterfaceDao" >
+  <resultMap id="BaseResultMap" type="com.dcm.more_ds.entity.sqlserver.ProsonmanagementInterface" >
+    <result column="zf_bh" property="zfBh" jdbcType="NVARCHAR" />
+    <result column="xm" property="xm" jdbcType="NVARCHAR" />
+    <result column="zsxm" property="zsxm" jdbcType="NVARCHAR" />
+    <result column="xb" property="xb" jdbcType="NVARCHAR" />
+    <result column="CSRQ" property="csrq" jdbcType="TIMESTAMP" />
+    <result column="mz" property="mz" jdbcType="NVARCHAR" />
+    <result column="BQWHCD" property="bqwhcd" jdbcType="NVARCHAR" />
+    <result column="hyzk" property="hyzk" jdbcType="NVARCHAR" />
+    <result column="bqmm" property="bqmm" jdbcType="NVARCHAR" />
+    <result column="bqzy" property="bqzy" jdbcType="NVARCHAR" />
+    <result column="bqzc" property="bqzc" jdbcType="NVARCHAR" />
+    <result column="bqzj" property="bqzj" jdbcType="NVARCHAR" />
+    <result column="sxzy" property="sxzy" jdbcType="NVARCHAR" />
+    <result column="tc" property="tc" jdbcType="NVARCHAR" />
+    <result column="dptt" property="dptt" jdbcType="NVARCHAR" />
+    <result column="zjlx" property="zjlx" jdbcType="NVARCHAR" />
+    <result column="zjhm" property="zjhm" jdbcType="NVARCHAR" />
+    <result column="gjdq" property="gjdq" jdbcType="NVARCHAR" />
+    <result column="JGQH" property="jgqh" jdbcType="NVARCHAR" />
+    <result column="CSQH" property="csqh" jdbcType="NVARCHAR" />
+    <result column="JTQH" property="jtqh" jdbcType="NVARCHAR" />
+    <result column="JTMX" property="jtmx" jdbcType="NVARCHAR" />
+    <result column="HJQH1" property="hjqh1" jdbcType="NVARCHAR" />
+    <result column="HJQH2" property="hjqh2" jdbcType="NVARCHAR" />
+    <result column="HJMX" property="hjmx" jdbcType="NVARCHAR" />
+    <result column="HKLX" property="hklx" jdbcType="NVARCHAR" />
+    <result column="bhm" property="bhm" jdbcType="NVARCHAR" />
+    <result column="qrq" property="qrq" jdbcType="TIMESTAMP" />
+    <result column="zrq" property="zrq" jdbcType="TIMESTAMP" />
+    <result column="dwqh" property="dwqh" jdbcType="NVARCHAR" />
+    <result column="dwmx" property="dwmx" jdbcType="NVARCHAR" />
+    <result column="zy" property="zy" jdbcType="NVARCHAR" />
+    <result column="zw" property="zw" jdbcType="NVARCHAR" />
+    <result column="zc" property="zc" jdbcType="NVARCHAR" />
+    <result column="gx" property="gx" jdbcType="NVARCHAR" />
+    <result column="gxrxm" property="gxrxm" jdbcType="NVARCHAR" />
+    <result column="gxrjtqh" property="gxrjtqh" jdbcType="NVARCHAR" />
+    <result column="gxrjtmx" property="gxrjtmx" jdbcType="NVARCHAR" />
+    <result column="gxrdwqh" property="gxrdwqh" jdbcType="NVARCHAR" />
+    <result column="gxrzy" property="gxrzy" jdbcType="NVARCHAR" />
+    <result column="gxrzw" property="gxrzw" jdbcType="NVARCHAR" />
+    <result column="gxrzjlx" property="gxrzjlx" jdbcType="NVARCHAR" />
+    <result column="gxrzjhm" property="gxrzjhm" jdbcType="NVARCHAR" />
+    <result column="dh" property="dh" jdbcType="NVARCHAR" />
+    <result column="zlxr" property="zlxr" jdbcType="NVARCHAR" />
+    <result column="wcnfz" property="wcnfz" jdbcType="NVARCHAR" />
+    <result column="JYRQ" property="jyrq" jdbcType="TIMESTAMP" />
+    <result column="dbqh" property="dbqh" jdbcType="NVARCHAR" />
+    <result column="dbmx" property="dbmx" jdbcType="NVARCHAR" />
+    <result column="dbrq" property="dbrq" jdbcType="TIMESTAMP" />
+    <result column="qsqh" property="qsqh" jdbcType="NVARCHAR" />
+    <result column="RJRQ" property="rjrq" jdbcType="TIMESTAMP" />
+    <result column="YSPJRQ" property="yspjrq" jdbcType="TIMESTAMP" />
+    <result column="ysmx" property="ysmx" jdbcType="NVARCHAR" />
+    <result column="YSZM" property="yszm" jdbcType="NVARCHAR" />
+    <result column="YSXQ" property="ysxq" jdbcType="NVARCHAR" />
+    <result column="PCMX" property="pcmx" jdbcType="NVARCHAR" />
+    <result column="zm" property="zm" jdbcType="NVARCHAR" />
+    <result column="xq" property="xq" jdbcType="NVARCHAR" />
+    <result column="qr" property="qr" jdbcType="TIMESTAMP" />
+    <result column="zr" property="zr" jdbcType="TIMESTAMP" />
+    <result column="bznx" property="bznx" jdbcType="NVARCHAR" />
+    <result column="fjje" property="fjje" jdbcType="NVARCHAR" />
+    <result column="aflb" property="aflb" jdbcType="NVARCHAR" />
+    <result column="sylb" property="sylb" jdbcType="NVARCHAR" />
+    <result column="SYRQ" property="syrq" jdbcType="TIMESTAMP" />
+    <result column="SYJG1" property="syjg1" jdbcType="NVARCHAR" />
+    <result column="ljrq" property="ljrq" jdbcType="TIMESTAMP" />
+    <result column="QXQH" property="qxqh" jdbcType="NVARCHAR" />
+    <result column="QXMX" property="qxmx" jdbcType="NVARCHAR" />
+    <result column="khf" property="khf" jdbcType="DOUBLE" />
+    <result column="DAH" property="dah" jdbcType="NVARCHAR" />
+    <result column="GYMX" property="gymx" jdbcType="NVARCHAR" />
+    <result column="fylx" property="fylx" jdbcType="NVARCHAR" />
+    <result column="XWHCD" property="xwhcd" jdbcType="NVARCHAR" />
+    <result column="zyzt" property="zyzt" jdbcType="NVARCHAR" />
+    <result column="jcxm" property="jcxm" jdbcType="NVARCHAR" />
+    <result column="FGDJ" property="fgdj" jdbcType="NVARCHAR" />
+    <result column="tbgzlb" property="tbgzlb" jdbcType="NVARCHAR" />
+    <result column="gycsbdPZRQ" property="gycsbdpzrq" jdbcType="TIMESTAMP" />
+    <result column="DLZH" property="dlzh" jdbcType="NVARCHAR" />
+    <result column="fgdjbdPZRQ" property="fgdjbdpzrq" jdbcType="TIMESTAMP" />
+    <result column="QFGDJ" property="qfgdj" jdbcType="NVARCHAR" />
+    <result column="HFGDJ" property="hfgdj" jdbcType="NVARCHAR" />
+    <result column="BZ" property="bz" jdbcType="NVARCHAR" />
+    <result column="yzjlCBRQ" property="yzjlcbrq" jdbcType="TIMESTAMP" />
+    <result column="yzjlPZRQ" property="yzjlpzrq" jdbcType="TIMESTAMP" />
+    <result column="JLYY" property="jlyy" jdbcType="NVARCHAR" />
+    <result column="YYJX" property="yyjx" jdbcType="NVARCHAR" />
+    <result column="yzjlbz" property="yzjlbz" jdbcType="NVARCHAR" />
+    <result column="yzccCBRQ" property="yzcccbrq" jdbcType="TIMESTAMP" />
+    <result column="yzccPZRQ" property="yzccpzrq" jdbcType="TIMESTAMP" />
+    <result column="ccYY" property="ccyy" jdbcType="NVARCHAR" />
+    <result column="CCZR" property="cczr" jdbcType="TIMESTAMP" />
+    <result column="yzccbz" property="yzccbz" jdbcType="NVARCHAR" />
+    <result column="BDLB" property="bdlb" jdbcType="NVARCHAR" />
+    <result column="PCQH" property="pcqh" jdbcType="NVARCHAR" />
+    <result column="PCRQ" property="pcrq" jdbcType="TIMESTAMP" />
+    <result column="BDFD" property="bdfd" jdbcType="NVARCHAR" />
+    <result column="XFBDQR" property="xfbdqr" jdbcType="TIMESTAMP" />
+    <result column="XFBDZR" property="xfbdzr" jdbcType="TIMESTAMP" />
+    <result column="xfbdBZNX" property="xfbdbznx" jdbcType="NVARCHAR" />
+    <result column="xfbdAFLB" property="xfbdaflb" jdbcType="NVARCHAR" />
+    <result column="ZXRQ" property="zxrq" jdbcType="TIMESTAMP" />
+    <result column="ZCLB" property="zclb" jdbcType="NVARCHAR" />
+    <result column="GWLB" property="gwlb" jdbcType="NVARCHAR" />
+    <result column="GWGZ" property="gwgz" jdbcType="NVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    zf_bh, xm, zsxm, xb, CSRQ, mz, BQWHCD, hyzk, bqmm, bqzy, bqzc, bqzj, sxzy, tc, dptt, 
+    zjlx, zjhm, gjdq, JGQH, CSQH, JTQH, JTMX, HJQH1, HJQH2, HJMX, HKLX, bhm, qrq, zrq, 
+    dwqh, dwmx, zy, zw, zc, gx, gxrxm, gxrjtqh, gxrjtmx, gxrdwqh, gxrzy, gxrzw, gxrzjlx, 
+    gxrzjhm, dh, zlxr, wcnfz, JYRQ, dbqh, dbmx, dbrq, qsqh, RJRQ, YSPJRQ, ysmx, YSZM, 
+    YSXQ, PCMX, zm, xq, qr, zr, bznx, fjje, aflb, sylb, SYRQ, SYJG1, ljrq, QXQH, QXMX, 
+    khf, DAH, GYMX, fylx, XWHCD, zyzt, jcxm, FGDJ, tbgzlb, gycsbdPZRQ, DLZH, fgdjbdPZRQ, 
+    QFGDJ, HFGDJ, BZ, yzjlCBRQ, yzjlPZRQ, JLYY, YYJX, yzjlbz, yzccCBRQ, yzccPZRQ, ccYY, 
+    CCZR, yzccbz, BDLB, PCQH, PCRQ, BDFD, XFBDQR, XFBDZR, xfbdBZNX, xfbdAFLB, ZXRQ, ZCLB, 
+    GWLB, GWGZ
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.dcm.more_ds.query.sqlserver.ProsonmanagementInterfaceExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List_Dy" />
+    from prosonmanagement_interface
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.dcm.more_ds.query.sqlserver.ProsonmanagementInterfaceExample" >
+    delete from prosonmanagement_interface
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.dcm.more_ds.entity.sqlserver.ProsonmanagementInterface" useGeneratedKeys="true" keyProperty="zfBh" >
+    insert into prosonmanagement_interface (zf_bh, xm, zsxm, 
+      xb, CSRQ, mz, BQWHCD, 
+      hyzk, bqmm, bqzy, 
+      bqzc, bqzj, sxzy, 
+      tc, dptt, zjlx, 
+      zjhm, gjdq, JGQH, 
+      CSQH, JTQH, JTMX, 
+      HJQH1, HJQH2, HJMX, 
+      HKLX, bhm, qrq, 
+      zrq, dwqh, dwmx, 
+      zy, zw, zc, gx, 
+      gxrxm, gxrjtqh, gxrjtmx, 
+      gxrdwqh, gxrzy, gxrzw, 
+      gxrzjlx, gxrzjhm, dh, 
+      zlxr, wcnfz, JYRQ, 
+      dbqh, dbmx, dbrq, 
+      qsqh, RJRQ, YSPJRQ, 
+      ysmx, YSZM, YSXQ, 
+      PCMX, zm, xq, qr, 
+      zr, bznx, fjje, 
+      aflb, sylb, SYRQ, 
+      SYJG1, ljrq, QXQH, 
+      QXMX, khf, DAH, GYMX, 
+      fylx, XWHCD, zyzt, 
+      jcxm, FGDJ, tbgzlb, 
+      gycsbdPZRQ, DLZH, fgdjbdPZRQ, 
+      QFGDJ, HFGDJ, BZ, 
+      yzjlCBRQ, yzjlPZRQ, JLYY, 
+      YYJX, yzjlbz, yzccCBRQ, 
+      yzccPZRQ, ccYY, CCZR, 
+      yzccbz, BDLB, PCQH, 
+      PCRQ, BDFD, XFBDQR, 
+      XFBDZR, xfbdBZNX, xfbdAFLB, 
+      ZXRQ, ZCLB, GWLB, 
+      GWGZ)
+    values (#{zfBh,jdbcType=NVARCHAR}, #{xm,jdbcType=NVARCHAR}, #{zsxm,jdbcType=NVARCHAR}, 
+      #{xb,jdbcType=NVARCHAR}, #{csrq,jdbcType=TIMESTAMP}, #{mz,jdbcType=NVARCHAR}, #{bqwhcd,jdbcType=NVARCHAR}, 
+      #{hyzk,jdbcType=NVARCHAR}, #{bqmm,jdbcType=NVARCHAR}, #{bqzy,jdbcType=NVARCHAR}, 
+      #{bqzc,jdbcType=NVARCHAR}, #{bqzj,jdbcType=NVARCHAR}, #{sxzy,jdbcType=NVARCHAR}, 
+      #{tc,jdbcType=NVARCHAR}, #{dptt,jdbcType=NVARCHAR}, #{zjlx,jdbcType=NVARCHAR}, 
+      #{zjhm,jdbcType=NVARCHAR}, #{gjdq,jdbcType=NVARCHAR}, #{jgqh,jdbcType=NVARCHAR}, 
+      #{csqh,jdbcType=NVARCHAR}, #{jtqh,jdbcType=NVARCHAR}, #{jtmx,jdbcType=NVARCHAR}, 
+      #{hjqh1,jdbcType=NVARCHAR}, #{hjqh2,jdbcType=NVARCHAR}, #{hjmx,jdbcType=NVARCHAR}, 
+      #{hklx,jdbcType=NVARCHAR}, #{bhm,jdbcType=NVARCHAR}, #{qrq,jdbcType=TIMESTAMP}, 
+      #{zrq,jdbcType=TIMESTAMP}, #{dwqh,jdbcType=NVARCHAR}, #{dwmx,jdbcType=NVARCHAR}, 
+      #{zy,jdbcType=NVARCHAR}, #{zw,jdbcType=NVARCHAR}, #{zc,jdbcType=NVARCHAR}, #{gx,jdbcType=NVARCHAR}, 
+      #{gxrxm,jdbcType=NVARCHAR}, #{gxrjtqh,jdbcType=NVARCHAR}, #{gxrjtmx,jdbcType=NVARCHAR}, 
+      #{gxrdwqh,jdbcType=NVARCHAR}, #{gxrzy,jdbcType=NVARCHAR}, #{gxrzw,jdbcType=NVARCHAR}, 
+      #{gxrzjlx,jdbcType=NVARCHAR}, #{gxrzjhm,jdbcType=NVARCHAR}, #{dh,jdbcType=NVARCHAR}, 
+      #{zlxr,jdbcType=NVARCHAR}, #{wcnfz,jdbcType=NVARCHAR}, #{jyrq,jdbcType=TIMESTAMP}, 
+      #{dbqh,jdbcType=NVARCHAR}, #{dbmx,jdbcType=NVARCHAR}, #{dbrq,jdbcType=TIMESTAMP}, 
+      #{qsqh,jdbcType=NVARCHAR}, #{rjrq,jdbcType=TIMESTAMP}, #{yspjrq,jdbcType=TIMESTAMP}, 
+      #{ysmx,jdbcType=NVARCHAR}, #{yszm,jdbcType=NVARCHAR}, #{ysxq,jdbcType=NVARCHAR}, 
+      #{pcmx,jdbcType=NVARCHAR}, #{zm,jdbcType=NVARCHAR}, #{xq,jdbcType=NVARCHAR}, #{qr,jdbcType=TIMESTAMP}, 
+      #{zr,jdbcType=TIMESTAMP}, #{bznx,jdbcType=NVARCHAR}, #{fjje,jdbcType=NVARCHAR}, 
+      #{aflb,jdbcType=NVARCHAR}, #{sylb,jdbcType=NVARCHAR}, #{syrq,jdbcType=TIMESTAMP}, 
+      #{syjg1,jdbcType=NVARCHAR}, #{ljrq,jdbcType=TIMESTAMP}, #{qxqh,jdbcType=NVARCHAR}, 
+      #{qxmx,jdbcType=NVARCHAR}, #{khf,jdbcType=DOUBLE}, #{dah,jdbcType=NVARCHAR}, #{gymx,jdbcType=NVARCHAR}, 
+      #{fylx,jdbcType=NVARCHAR}, #{xwhcd,jdbcType=NVARCHAR}, #{zyzt,jdbcType=NVARCHAR}, 
+      #{jcxm,jdbcType=NVARCHAR}, #{fgdj,jdbcType=NVARCHAR}, #{tbgzlb,jdbcType=NVARCHAR}, 
+      #{gycsbdpzrq,jdbcType=TIMESTAMP}, #{dlzh,jdbcType=NVARCHAR}, #{fgdjbdpzrq,jdbcType=TIMESTAMP}, 
+      #{qfgdj,jdbcType=NVARCHAR}, #{hfgdj,jdbcType=NVARCHAR}, #{bz,jdbcType=NVARCHAR}, 
+      #{yzjlcbrq,jdbcType=TIMESTAMP}, #{yzjlpzrq,jdbcType=TIMESTAMP}, #{jlyy,jdbcType=NVARCHAR}, 
+      #{yyjx,jdbcType=NVARCHAR}, #{yzjlbz,jdbcType=NVARCHAR}, #{yzcccbrq,jdbcType=TIMESTAMP}, 
+      #{yzccpzrq,jdbcType=TIMESTAMP}, #{ccyy,jdbcType=NVARCHAR}, #{cczr,jdbcType=TIMESTAMP}, 
+      #{yzccbz,jdbcType=NVARCHAR}, #{bdlb,jdbcType=NVARCHAR}, #{pcqh,jdbcType=NVARCHAR}, 
+      #{pcrq,jdbcType=TIMESTAMP}, #{bdfd,jdbcType=NVARCHAR}, #{xfbdqr,jdbcType=TIMESTAMP}, 
+      #{xfbdzr,jdbcType=TIMESTAMP}, #{xfbdbznx,jdbcType=NVARCHAR}, #{xfbdaflb,jdbcType=NVARCHAR}, 
+      #{zxrq,jdbcType=TIMESTAMP}, #{zclb,jdbcType=NVARCHAR}, #{gwlb,jdbcType=NVARCHAR}, 
+      #{gwgz,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dcm.more_ds.entity.sqlserver.ProsonmanagementInterface" useGeneratedKeys="true" keyProperty="zfBh" >
+    insert into prosonmanagement_interface
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="zfBh != null" >
+        zf_bh,
+      </if>
+      <if test="xm != null" >
+        xm,
+      </if>
+      <if test="zsxm != null" >
+        zsxm,
+      </if>
+      <if test="xb != null" >
+        xb,
+      </if>
+      <if test="csrq != null" >
+        CSRQ,
+      </if>
+      <if test="mz != null" >
+        mz,
+      </if>
+      <if test="bqwhcd != null" >
+        BQWHCD,
+      </if>
+      <if test="hyzk != null" >
+        hyzk,
+      </if>
+      <if test="bqmm != null" >
+        bqmm,
+      </if>
+      <if test="bqzy != null" >
+        bqzy,
+      </if>
+      <if test="bqzc != null" >
+        bqzc,
+      </if>
+      <if test="bqzj != null" >
+        bqzj,
+      </if>
+      <if test="sxzy != null" >
+        sxzy,
+      </if>
+      <if test="tc != null" >
+        tc,
+      </if>
+      <if test="dptt != null" >
+        dptt,
+      </if>
+      <if test="zjlx != null" >
+        zjlx,
+      </if>
+      <if test="zjhm != null" >
+        zjhm,
+      </if>
+      <if test="gjdq != null" >
+        gjdq,
+      </if>
+      <if test="jgqh != null" >
+        JGQH,
+      </if>
+      <if test="csqh != null" >
+        CSQH,
+      </if>
+      <if test="jtqh != null" >
+        JTQH,
+      </if>
+      <if test="jtmx != null" >
+        JTMX,
+      </if>
+      <if test="hjqh1 != null" >
+        HJQH1,
+      </if>
+      <if test="hjqh2 != null" >
+        HJQH2,
+      </if>
+      <if test="hjmx != null" >
+        HJMX,
+      </if>
+      <if test="hklx != null" >
+        HKLX,
+      </if>
+      <if test="bhm != null" >
+        bhm,
+      </if>
+      <if test="qrq != null" >
+        qrq,
+      </if>
+      <if test="zrq != null" >
+        zrq,
+      </if>
+      <if test="dwqh != null" >
+        dwqh,
+      </if>
+      <if test="dwmx != null" >
+        dwmx,
+      </if>
+      <if test="zy != null" >
+        zy,
+      </if>
+      <if test="zw != null" >
+        zw,
+      </if>
+      <if test="zc != null" >
+        zc,
+      </if>
+      <if test="gx != null" >
+        gx,
+      </if>
+      <if test="gxrxm != null" >
+        gxrxm,
+      </if>
+      <if test="gxrjtqh != null" >
+        gxrjtqh,
+      </if>
+      <if test="gxrjtmx != null" >
+        gxrjtmx,
+      </if>
+      <if test="gxrdwqh != null" >
+        gxrdwqh,
+      </if>
+      <if test="gxrzy != null" >
+        gxrzy,
+      </if>
+      <if test="gxrzw != null" >
+        gxrzw,
+      </if>
+      <if test="gxrzjlx != null" >
+        gxrzjlx,
+      </if>
+      <if test="gxrzjhm != null" >
+        gxrzjhm,
+      </if>
+      <if test="dh != null" >
+        dh,
+      </if>
+      <if test="zlxr != null" >
+        zlxr,
+      </if>
+      <if test="wcnfz != null" >
+        wcnfz,
+      </if>
+      <if test="jyrq != null" >
+        JYRQ,
+      </if>
+      <if test="dbqh != null" >
+        dbqh,
+      </if>
+      <if test="dbmx != null" >
+        dbmx,
+      </if>
+      <if test="dbrq != null" >
+        dbrq,
+      </if>
+      <if test="qsqh != null" >
+        qsqh,
+      </if>
+      <if test="rjrq != null" >
+        RJRQ,
+      </if>
+      <if test="yspjrq != null" >
+        YSPJRQ,
+      </if>
+      <if test="ysmx != null" >
+        ysmx,
+      </if>
+      <if test="yszm != null" >
+        YSZM,
+      </if>
+      <if test="ysxq != null" >
+        YSXQ,
+      </if>
+      <if test="pcmx != null" >
+        PCMX,
+      </if>
+      <if test="zm != null" >
+        zm,
+      </if>
+      <if test="xq != null" >
+        xq,
+      </if>
+      <if test="qr != null" >
+        qr,
+      </if>
+      <if test="zr != null" >
+        zr,
+      </if>
+      <if test="bznx != null" >
+        bznx,
+      </if>
+      <if test="fjje != null" >
+        fjje,
+      </if>
+      <if test="aflb != null" >
+        aflb,
+      </if>
+      <if test="sylb != null" >
+        sylb,
+      </if>
+      <if test="syrq != null" >
+        SYRQ,
+      </if>
+      <if test="syjg1 != null" >
+        SYJG1,
+      </if>
+      <if test="ljrq != null" >
+        ljrq,
+      </if>
+      <if test="qxqh != null" >
+        QXQH,
+      </if>
+      <if test="qxmx != null" >
+        QXMX,
+      </if>
+      <if test="khf != null" >
+        khf,
+      </if>
+      <if test="dah != null" >
+        DAH,
+      </if>
+      <if test="gymx != null" >
+        GYMX,
+      </if>
+      <if test="fylx != null" >
+        fylx,
+      </if>
+      <if test="xwhcd != null" >
+        XWHCD,
+      </if>
+      <if test="zyzt != null" >
+        zyzt,
+      </if>
+      <if test="jcxm != null" >
+        jcxm,
+      </if>
+      <if test="fgdj != null" >
+        FGDJ,
+      </if>
+      <if test="tbgzlb != null" >
+        tbgzlb,
+      </if>
+      <if test="gycsbdpzrq != null" >
+        gycsbdPZRQ,
+      </if>
+      <if test="dlzh != null" >
+        DLZH,
+      </if>
+      <if test="fgdjbdpzrq != null" >
+        fgdjbdPZRQ,
+      </if>
+      <if test="qfgdj != null" >
+        QFGDJ,
+      </if>
+      <if test="hfgdj != null" >
+        HFGDJ,
+      </if>
+      <if test="bz != null" >
+        BZ,
+      </if>
+      <if test="yzjlcbrq != null" >
+        yzjlCBRQ,
+      </if>
+      <if test="yzjlpzrq != null" >
+        yzjlPZRQ,
+      </if>
+      <if test="jlyy != null" >
+        JLYY,
+      </if>
+      <if test="yyjx != null" >
+        YYJX,
+      </if>
+      <if test="yzjlbz != null" >
+        yzjlbz,
+      </if>
+      <if test="yzcccbrq != null" >
+        yzccCBRQ,
+      </if>
+      <if test="yzccpzrq != null" >
+        yzccPZRQ,
+      </if>
+      <if test="ccyy != null" >
+        ccYY,
+      </if>
+      <if test="cczr != null" >
+        CCZR,
+      </if>
+      <if test="yzccbz != null" >
+        yzccbz,
+      </if>
+      <if test="bdlb != null" >
+        BDLB,
+      </if>
+      <if test="pcqh != null" >
+        PCQH,
+      </if>
+      <if test="pcrq != null" >
+        PCRQ,
+      </if>
+      <if test="bdfd != null" >
+        BDFD,
+      </if>
+      <if test="xfbdqr != null" >
+        XFBDQR,
+      </if>
+      <if test="xfbdzr != null" >
+        XFBDZR,
+      </if>
+      <if test="xfbdbznx != null" >
+        xfbdBZNX,
+      </if>
+      <if test="xfbdaflb != null" >
+        xfbdAFLB,
+      </if>
+      <if test="zxrq != null" >
+        ZXRQ,
+      </if>
+      <if test="zclb != null" >
+        ZCLB,
+      </if>
+      <if test="gwlb != null" >
+        GWLB,
+      </if>
+      <if test="gwgz != null" >
+        GWGZ,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="zfBh != null" >
+        #{zfBh,jdbcType=NVARCHAR},
+      </if>
+      <if test="xm != null" >
+        #{xm,jdbcType=NVARCHAR},
+      </if>
+      <if test="zsxm != null" >
+        #{zsxm,jdbcType=NVARCHAR},
+      </if>
+      <if test="xb != null" >
+        #{xb,jdbcType=NVARCHAR},
+      </if>
+      <if test="csrq != null" >
+        #{csrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mz != null" >
+        #{mz,jdbcType=NVARCHAR},
+      </if>
+      <if test="bqwhcd != null" >
+        #{bqwhcd,jdbcType=NVARCHAR},
+      </if>
+      <if test="hyzk != null" >
+        #{hyzk,jdbcType=NVARCHAR},
+      </if>
+      <if test="bqmm != null" >
+        #{bqmm,jdbcType=NVARCHAR},
+      </if>
+      <if test="bqzy != null" >
+        #{bqzy,jdbcType=NVARCHAR},
+      </if>
+      <if test="bqzc != null" >
+        #{bqzc,jdbcType=NVARCHAR},
+      </if>
+      <if test="bqzj != null" >
+        #{bqzj,jdbcType=NVARCHAR},
+      </if>
+      <if test="sxzy != null" >
+        #{sxzy,jdbcType=NVARCHAR},
+      </if>
+      <if test="tc != null" >
+        #{tc,jdbcType=NVARCHAR},
+      </if>
+      <if test="dptt != null" >
+        #{dptt,jdbcType=NVARCHAR},
+      </if>
+      <if test="zjlx != null" >
+        #{zjlx,jdbcType=NVARCHAR},
+      </if>
+      <if test="zjhm != null" >
+        #{zjhm,jdbcType=NVARCHAR},
+      </if>
+      <if test="gjdq != null" >
+        #{gjdq,jdbcType=NVARCHAR},
+      </if>
+      <if test="jgqh != null" >
+        #{jgqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="csqh != null" >
+        #{csqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="jtqh != null" >
+        #{jtqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="jtmx != null" >
+        #{jtmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="hjqh1 != null" >
+        #{hjqh1,jdbcType=NVARCHAR},
+      </if>
+      <if test="hjqh2 != null" >
+        #{hjqh2,jdbcType=NVARCHAR},
+      </if>
+      <if test="hjmx != null" >
+        #{hjmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="hklx != null" >
+        #{hklx,jdbcType=NVARCHAR},
+      </if>
+      <if test="bhm != null" >
+        #{bhm,jdbcType=NVARCHAR},
+      </if>
+      <if test="qrq != null" >
+        #{qrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zrq != null" >
+        #{zrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dwqh != null" >
+        #{dwqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="dwmx != null" >
+        #{dwmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="zy != null" >
+        #{zy,jdbcType=NVARCHAR},
+      </if>
+      <if test="zw != null" >
+        #{zw,jdbcType=NVARCHAR},
+      </if>
+      <if test="zc != null" >
+        #{zc,jdbcType=NVARCHAR},
+      </if>
+      <if test="gx != null" >
+        #{gx,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrxm != null" >
+        #{gxrxm,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrjtqh != null" >
+        #{gxrjtqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrjtmx != null" >
+        #{gxrjtmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrdwqh != null" >
+        #{gxrdwqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrzy != null" >
+        #{gxrzy,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrzw != null" >
+        #{gxrzw,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrzjlx != null" >
+        #{gxrzjlx,jdbcType=NVARCHAR},
+      </if>
+      <if test="gxrzjhm != null" >
+        #{gxrzjhm,jdbcType=NVARCHAR},
+      </if>
+      <if test="dh != null" >
+        #{dh,jdbcType=NVARCHAR},
+      </if>
+      <if test="zlxr != null" >
+        #{zlxr,jdbcType=NVARCHAR},
+      </if>
+      <if test="wcnfz != null" >
+        #{wcnfz,jdbcType=NVARCHAR},
+      </if>
+      <if test="jyrq != null" >
+        #{jyrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dbqh != null" >
+        #{dbqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="dbmx != null" >
+        #{dbmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="dbrq != null" >
+        #{dbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qsqh != null" >
+        #{qsqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="rjrq != null" >
+        #{rjrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yspjrq != null" >
+        #{yspjrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ysmx != null" >
+        #{ysmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="yszm != null" >
+        #{yszm,jdbcType=NVARCHAR},
+      </if>
+      <if test="ysxq != null" >
+        #{ysxq,jdbcType=NVARCHAR},
+      </if>
+      <if test="pcmx != null" >
+        #{pcmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="zm != null" >
+        #{zm,jdbcType=NVARCHAR},
+      </if>
+      <if test="xq != null" >
+        #{xq,jdbcType=NVARCHAR},
+      </if>
+      <if test="qr != null" >
+        #{qr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zr != null" >
+        #{zr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bznx != null" >
+        #{bznx,jdbcType=NVARCHAR},
+      </if>
+      <if test="fjje != null" >
+        #{fjje,jdbcType=NVARCHAR},
+      </if>
+      <if test="aflb != null" >
+        #{aflb,jdbcType=NVARCHAR},
+      </if>
+      <if test="sylb != null" >
+        #{sylb,jdbcType=NVARCHAR},
+      </if>
+      <if test="syrq != null" >
+        #{syrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="syjg1 != null" >
+        #{syjg1,jdbcType=NVARCHAR},
+      </if>
+      <if test="ljrq != null" >
+        #{ljrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qxqh != null" >
+        #{qxqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="qxmx != null" >
+        #{qxmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="khf != null" >
+        #{khf,jdbcType=DOUBLE},
+      </if>
+      <if test="dah != null" >
+        #{dah,jdbcType=NVARCHAR},
+      </if>
+      <if test="gymx != null" >
+        #{gymx,jdbcType=NVARCHAR},
+      </if>
+      <if test="fylx != null" >
+        #{fylx,jdbcType=NVARCHAR},
+      </if>
+      <if test="xwhcd != null" >
+        #{xwhcd,jdbcType=NVARCHAR},
+      </if>
+      <if test="zyzt != null" >
+        #{zyzt,jdbcType=NVARCHAR},
+      </if>
+      <if test="jcxm != null" >
+        #{jcxm,jdbcType=NVARCHAR},
+      </if>
+      <if test="fgdj != null" >
+        #{fgdj,jdbcType=NVARCHAR},
+      </if>
+      <if test="tbgzlb != null" >
+        #{tbgzlb,jdbcType=NVARCHAR},
+      </if>
+      <if test="gycsbdpzrq != null" >
+        #{gycsbdpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dlzh != null" >
+        #{dlzh,jdbcType=NVARCHAR},
+      </if>
+      <if test="fgdjbdpzrq != null" >
+        #{fgdjbdpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="qfgdj != null" >
+        #{qfgdj,jdbcType=NVARCHAR},
+      </if>
+      <if test="hfgdj != null" >
+        #{hfgdj,jdbcType=NVARCHAR},
+      </if>
+      <if test="bz != null" >
+        #{bz,jdbcType=NVARCHAR},
+      </if>
+      <if test="yzjlcbrq != null" >
+        #{yzjlcbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yzjlpzrq != null" >
+        #{yzjlpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="jlyy != null" >
+        #{jlyy,jdbcType=NVARCHAR},
+      </if>
+      <if test="yyjx != null" >
+        #{yyjx,jdbcType=NVARCHAR},
+      </if>
+      <if test="yzjlbz != null" >
+        #{yzjlbz,jdbcType=NVARCHAR},
+      </if>
+      <if test="yzcccbrq != null" >
+        #{yzcccbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yzccpzrq != null" >
+        #{yzccpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ccyy != null" >
+        #{ccyy,jdbcType=NVARCHAR},
+      </if>
+      <if test="cczr != null" >
+        #{cczr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yzccbz != null" >
+        #{yzccbz,jdbcType=NVARCHAR},
+      </if>
+      <if test="bdlb != null" >
+        #{bdlb,jdbcType=NVARCHAR},
+      </if>
+      <if test="pcqh != null" >
+        #{pcqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="pcrq != null" >
+        #{pcrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bdfd != null" >
+        #{bdfd,jdbcType=NVARCHAR},
+      </if>
+      <if test="xfbdqr != null" >
+        #{xfbdqr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xfbdzr != null" >
+        #{xfbdzr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xfbdbznx != null" >
+        #{xfbdbznx,jdbcType=NVARCHAR},
+      </if>
+      <if test="xfbdaflb != null" >
+        #{xfbdaflb,jdbcType=NVARCHAR},
+      </if>
+      <if test="zxrq != null" >
+        #{zxrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zclb != null" >
+        #{zclb,jdbcType=NVARCHAR},
+      </if>
+      <if test="gwlb != null" >
+        #{gwlb,jdbcType=NVARCHAR},
+      </if>
+      <if test="gwgz != null" >
+        #{gwgz,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" resultType="java.lang.Integer" parameterType="com.dcm.more_ds.query.sqlserver.ProsonmanagementInterfaceExample" >
+    select count(*) from prosonmanagement_interface
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update prosonmanagement_interface
+    <set >
+      <if test="record.zfBh != null" >
+        zf_bh = #{record.zfBh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.xm != null" >
+        xm = #{record.xm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zsxm != null" >
+        zsxm = #{record.zsxm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.xb != null" >
+        xb = #{record.xb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.csrq != null" >
+        CSRQ = #{record.csrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.mz != null" >
+        mz = #{record.mz,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bqwhcd != null" >
+        BQWHCD = #{record.bqwhcd,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.hyzk != null" >
+        hyzk = #{record.hyzk,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bqmm != null" >
+        bqmm = #{record.bqmm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bqzy != null" >
+        bqzy = #{record.bqzy,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bqzc != null" >
+        bqzc = #{record.bqzc,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bqzj != null" >
+        bqzj = #{record.bqzj,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.sxzy != null" >
+        sxzy = #{record.sxzy,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.tc != null" >
+        tc = #{record.tc,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.dptt != null" >
+        dptt = #{record.dptt,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zjlx != null" >
+        zjlx = #{record.zjlx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zjhm != null" >
+        zjhm = #{record.zjhm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gjdq != null" >
+        gjdq = #{record.gjdq,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.jgqh != null" >
+        JGQH = #{record.jgqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.csqh != null" >
+        CSQH = #{record.csqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.jtqh != null" >
+        JTQH = #{record.jtqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.jtmx != null" >
+        JTMX = #{record.jtmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.hjqh1 != null" >
+        HJQH1 = #{record.hjqh1,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.hjqh2 != null" >
+        HJQH2 = #{record.hjqh2,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.hjmx != null" >
+        HJMX = #{record.hjmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.hklx != null" >
+        HKLX = #{record.hklx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bhm != null" >
+        bhm = #{record.bhm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.qrq != null" >
+        qrq = #{record.qrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.zrq != null" >
+        zrq = #{record.zrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dwqh != null" >
+        dwqh = #{record.dwqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.dwmx != null" >
+        dwmx = #{record.dwmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zy != null" >
+        zy = #{record.zy,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zw != null" >
+        zw = #{record.zw,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zc != null" >
+        zc = #{record.zc,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gx != null" >
+        gx = #{record.gx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrxm != null" >
+        gxrxm = #{record.gxrxm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrjtqh != null" >
+        gxrjtqh = #{record.gxrjtqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrjtmx != null" >
+        gxrjtmx = #{record.gxrjtmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrdwqh != null" >
+        gxrdwqh = #{record.gxrdwqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrzy != null" >
+        gxrzy = #{record.gxrzy,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrzw != null" >
+        gxrzw = #{record.gxrzw,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrzjlx != null" >
+        gxrzjlx = #{record.gxrzjlx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gxrzjhm != null" >
+        gxrzjhm = #{record.gxrzjhm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.dh != null" >
+        dh = #{record.dh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zlxr != null" >
+        zlxr = #{record.zlxr,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.wcnfz != null" >
+        wcnfz = #{record.wcnfz,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.jyrq != null" >
+        JYRQ = #{record.jyrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dbqh != null" >
+        dbqh = #{record.dbqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.dbmx != null" >
+        dbmx = #{record.dbmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.dbrq != null" >
+        dbrq = #{record.dbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.qsqh != null" >
+        qsqh = #{record.qsqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.rjrq != null" >
+        RJRQ = #{record.rjrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.yspjrq != null" >
+        YSPJRQ = #{record.yspjrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.ysmx != null" >
+        ysmx = #{record.ysmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.yszm != null" >
+        YSZM = #{record.yszm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.ysxq != null" >
+        YSXQ = #{record.ysxq,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.pcmx != null" >
+        PCMX = #{record.pcmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zm != null" >
+        zm = #{record.zm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.xq != null" >
+        xq = #{record.xq,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.qr != null" >
+        qr = #{record.qr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.zr != null" >
+        zr = #{record.zr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.bznx != null" >
+        bznx = #{record.bznx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.fjje != null" >
+        fjje = #{record.fjje,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.aflb != null" >
+        aflb = #{record.aflb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.sylb != null" >
+        sylb = #{record.sylb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.syrq != null" >
+        SYRQ = #{record.syrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.syjg1 != null" >
+        SYJG1 = #{record.syjg1,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.ljrq != null" >
+        ljrq = #{record.ljrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.qxqh != null" >
+        QXQH = #{record.qxqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.qxmx != null" >
+        QXMX = #{record.qxmx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.khf != null" >
+        khf = #{record.khf,jdbcType=DOUBLE},
+      </if>
+      <if test="record.dah != null" >
+        DAH = #{record.dah,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gymx != null" >
+        GYMX = #{record.gymx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.fylx != null" >
+        fylx = #{record.fylx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.xwhcd != null" >
+        XWHCD = #{record.xwhcd,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zyzt != null" >
+        zyzt = #{record.zyzt,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.jcxm != null" >
+        jcxm = #{record.jcxm,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.fgdj != null" >
+        FGDJ = #{record.fgdj,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.tbgzlb != null" >
+        tbgzlb = #{record.tbgzlb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gycsbdpzrq != null" >
+        gycsbdPZRQ = #{record.gycsbdpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dlzh != null" >
+        DLZH = #{record.dlzh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.fgdjbdpzrq != null" >
+        fgdjbdPZRQ = #{record.fgdjbdpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.qfgdj != null" >
+        QFGDJ = #{record.qfgdj,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.hfgdj != null" >
+        HFGDJ = #{record.hfgdj,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bz != null" >
+        BZ = #{record.bz,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.yzjlcbrq != null" >
+        yzjlCBRQ = #{record.yzjlcbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.yzjlpzrq != null" >
+        yzjlPZRQ = #{record.yzjlpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.jlyy != null" >
+        JLYY = #{record.jlyy,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.yyjx != null" >
+        YYJX = #{record.yyjx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.yzjlbz != null" >
+        yzjlbz = #{record.yzjlbz,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.yzcccbrq != null" >
+        yzccCBRQ = #{record.yzcccbrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.yzccpzrq != null" >
+        yzccPZRQ = #{record.yzccpzrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.ccyy != null" >
+        ccYY = #{record.ccyy,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.cczr != null" >
+        CCZR = #{record.cczr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.yzccbz != null" >
+        yzccbz = #{record.yzccbz,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.bdlb != null" >
+        BDLB = #{record.bdlb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.pcqh != null" >
+        PCQH = #{record.pcqh,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.pcrq != null" >
+        PCRQ = #{record.pcrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.bdfd != null" >
+        BDFD = #{record.bdfd,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.xfbdqr != null" >
+        XFBDQR = #{record.xfbdqr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.xfbdzr != null" >
+        XFBDZR = #{record.xfbdzr,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.xfbdbznx != null" >
+        xfbdBZNX = #{record.xfbdbznx,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.xfbdaflb != null" >
+        xfbdAFLB = #{record.xfbdaflb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.zxrq != null" >
+        ZXRQ = #{record.zxrq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.zclb != null" >
+        ZCLB = #{record.zclb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gwlb != null" >
+        GWLB = #{record.gwlb,jdbcType=NVARCHAR},
+      </if>
+      <if test="record.gwgz != null" >
+        GWGZ = #{record.gwgz,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update prosonmanagement_interface
+    set zf_bh = #{record.zfBh,jdbcType=NVARCHAR},
+      xm = #{record.xm,jdbcType=NVARCHAR},
+      zsxm = #{record.zsxm,jdbcType=NVARCHAR},
+      xb = #{record.xb,jdbcType=NVARCHAR},
+      CSRQ = #{record.csrq,jdbcType=TIMESTAMP},
+      mz = #{record.mz,jdbcType=NVARCHAR},
+      BQWHCD = #{record.bqwhcd,jdbcType=NVARCHAR},
+      hyzk = #{record.hyzk,jdbcType=NVARCHAR},
+      bqmm = #{record.bqmm,jdbcType=NVARCHAR},
+      bqzy = #{record.bqzy,jdbcType=NVARCHAR},
+      bqzc = #{record.bqzc,jdbcType=NVARCHAR},
+      bqzj = #{record.bqzj,jdbcType=NVARCHAR},
+      sxzy = #{record.sxzy,jdbcType=NVARCHAR},
+      tc = #{record.tc,jdbcType=NVARCHAR},
+      dptt = #{record.dptt,jdbcType=NVARCHAR},
+      zjlx = #{record.zjlx,jdbcType=NVARCHAR},
+      zjhm = #{record.zjhm,jdbcType=NVARCHAR},
+      gjdq = #{record.gjdq,jdbcType=NVARCHAR},
+      JGQH = #{record.jgqh,jdbcType=NVARCHAR},
+      CSQH = #{record.csqh,jdbcType=NVARCHAR},
+      JTQH = #{record.jtqh,jdbcType=NVARCHAR},
+      JTMX = #{record.jtmx,jdbcType=NVARCHAR},
+      HJQH1 = #{record.hjqh1,jdbcType=NVARCHAR},
+      HJQH2 = #{record.hjqh2,jdbcType=NVARCHAR},
+      HJMX = #{record.hjmx,jdbcType=NVARCHAR},
+      HKLX = #{record.hklx,jdbcType=NVARCHAR},
+      bhm = #{record.bhm,jdbcType=NVARCHAR},
+      qrq = #{record.qrq,jdbcType=TIMESTAMP},
+      zrq = #{record.zrq,jdbcType=TIMESTAMP},
+      dwqh = #{record.dwqh,jdbcType=NVARCHAR},
+      dwmx = #{record.dwmx,jdbcType=NVARCHAR},
+      zy = #{record.zy,jdbcType=NVARCHAR},
+      zw = #{record.zw,jdbcType=NVARCHAR},
+      zc = #{record.zc,jdbcType=NVARCHAR},
+      gx = #{record.gx,jdbcType=NVARCHAR},
+      gxrxm = #{record.gxrxm,jdbcType=NVARCHAR},
+      gxrjtqh = #{record.gxrjtqh,jdbcType=NVARCHAR},
+      gxrjtmx = #{record.gxrjtmx,jdbcType=NVARCHAR},
+      gxrdwqh = #{record.gxrdwqh,jdbcType=NVARCHAR},
+      gxrzy = #{record.gxrzy,jdbcType=NVARCHAR},
+      gxrzw = #{record.gxrzw,jdbcType=NVARCHAR},
+      gxrzjlx = #{record.gxrzjlx,jdbcType=NVARCHAR},
+      gxrzjhm = #{record.gxrzjhm,jdbcType=NVARCHAR},
+      dh = #{record.dh,jdbcType=NVARCHAR},
+      zlxr = #{record.zlxr,jdbcType=NVARCHAR},
+      wcnfz = #{record.wcnfz,jdbcType=NVARCHAR},
+      JYRQ = #{record.jyrq,jdbcType=TIMESTAMP},
+      dbqh = #{record.dbqh,jdbcType=NVARCHAR},
+      dbmx = #{record.dbmx,jdbcType=NVARCHAR},
+      dbrq = #{record.dbrq,jdbcType=TIMESTAMP},
+      qsqh = #{record.qsqh,jdbcType=NVARCHAR},
+      RJRQ = #{record.rjrq,jdbcType=TIMESTAMP},
+      YSPJRQ = #{record.yspjrq,jdbcType=TIMESTAMP},
+      ysmx = #{record.ysmx,jdbcType=NVARCHAR},
+      YSZM = #{record.yszm,jdbcType=NVARCHAR},
+      YSXQ = #{record.ysxq,jdbcType=NVARCHAR},
+      PCMX = #{record.pcmx,jdbcType=NVARCHAR},
+      zm = #{record.zm,jdbcType=NVARCHAR},
+      xq = #{record.xq,jdbcType=NVARCHAR},
+      qr = #{record.qr,jdbcType=TIMESTAMP},
+      zr = #{record.zr,jdbcType=TIMESTAMP},
+      bznx = #{record.bznx,jdbcType=NVARCHAR},
+      fjje = #{record.fjje,jdbcType=NVARCHAR},
+      aflb = #{record.aflb,jdbcType=NVARCHAR},
+      sylb = #{record.sylb,jdbcType=NVARCHAR},
+      SYRQ = #{record.syrq,jdbcType=TIMESTAMP},
+      SYJG1 = #{record.syjg1,jdbcType=NVARCHAR},
+      ljrq = #{record.ljrq,jdbcType=TIMESTAMP},
+      QXQH = #{record.qxqh,jdbcType=NVARCHAR},
+      QXMX = #{record.qxmx,jdbcType=NVARCHAR},
+      khf = #{record.khf,jdbcType=DOUBLE},
+      DAH = #{record.dah,jdbcType=NVARCHAR},
+      GYMX = #{record.gymx,jdbcType=NVARCHAR},
+      fylx = #{record.fylx,jdbcType=NVARCHAR},
+      XWHCD = #{record.xwhcd,jdbcType=NVARCHAR},
+      zyzt = #{record.zyzt,jdbcType=NVARCHAR},
+      jcxm = #{record.jcxm,jdbcType=NVARCHAR},
+      FGDJ = #{record.fgdj,jdbcType=NVARCHAR},
+      tbgzlb = #{record.tbgzlb,jdbcType=NVARCHAR},
+      gycsbdPZRQ = #{record.gycsbdpzrq,jdbcType=TIMESTAMP},
+      DLZH = #{record.dlzh,jdbcType=NVARCHAR},
+      fgdjbdPZRQ = #{record.fgdjbdpzrq,jdbcType=TIMESTAMP},
+      QFGDJ = #{record.qfgdj,jdbcType=NVARCHAR},
+      HFGDJ = #{record.hfgdj,jdbcType=NVARCHAR},
+      BZ = #{record.bz,jdbcType=NVARCHAR},
+      yzjlCBRQ = #{record.yzjlcbrq,jdbcType=TIMESTAMP},
+      yzjlPZRQ = #{record.yzjlpzrq,jdbcType=TIMESTAMP},
+      JLYY = #{record.jlyy,jdbcType=NVARCHAR},
+      YYJX = #{record.yyjx,jdbcType=NVARCHAR},
+      yzjlbz = #{record.yzjlbz,jdbcType=NVARCHAR},
+      yzccCBRQ = #{record.yzcccbrq,jdbcType=TIMESTAMP},
+      yzccPZRQ = #{record.yzccpzrq,jdbcType=TIMESTAMP},
+      ccYY = #{record.ccyy,jdbcType=NVARCHAR},
+      CCZR = #{record.cczr,jdbcType=TIMESTAMP},
+      yzccbz = #{record.yzccbz,jdbcType=NVARCHAR},
+      BDLB = #{record.bdlb,jdbcType=NVARCHAR},
+      PCQH = #{record.pcqh,jdbcType=NVARCHAR},
+      PCRQ = #{record.pcrq,jdbcType=TIMESTAMP},
+      BDFD = #{record.bdfd,jdbcType=NVARCHAR},
+      XFBDQR = #{record.xfbdqr,jdbcType=TIMESTAMP},
+      XFBDZR = #{record.xfbdzr,jdbcType=TIMESTAMP},
+      xfbdBZNX = #{record.xfbdbznx,jdbcType=NVARCHAR},
+      xfbdAFLB = #{record.xfbdaflb,jdbcType=NVARCHAR},
+      ZXRQ = #{record.zxrq,jdbcType=TIMESTAMP},
+      ZCLB = #{record.zclb,jdbcType=NVARCHAR},
+      GWLB = #{record.gwlb,jdbcType=NVARCHAR},
+      GWGZ = #{record.gwgz,jdbcType=NVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <sql id="Base_Column_List_Dy" >
+    <if test="fields==null" >
+      <include refid="Base_Column_List" />
+    </if>
+    <if test="fields!=null" >
+      <foreach collection="fields" item="field" separator="," >
+        ${field}
+      </foreach>
+    </if>
+  </sql>
+</mapper>
